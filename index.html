@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/>
+
+    <title>hello map</title>
+    <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">
+    <style>
+        html,body,#map {
+            height:100%;
+            width:100%;
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-color: #fff;
+            overflow: hidden;
+            font-family: "Trebuchet MS";
+        }
+    </style>
+    <script src="http://js.arcgis.com/3.10/"></script>
+    <script language="JavaScript">
+        var map;
+        require(["esri/map","dojo/domReady"],function(Map){
+            map = new Map("map",{
+                basemap:"topo",
+                center:[116.45,40.75],
+                zoom:3
+            })
+        })
+
+    </script>
+</head>
+<body>
+<h1>hello</h1>
+<div id="map"></div>
+</body>
+</html>
